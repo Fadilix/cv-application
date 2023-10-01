@@ -10,8 +10,3 @@ This project is a part of The Odin Project, an open-source curriculum for learni
 The CV Page component is designed as a practical exercise within The Odin Project curriculum. It enables users to create a virtual CV by inputting personal details, skills, languages, and professional experiences. The project demonstrates the integration of React components, state management, and user input handling.
 
 ![image](https://github.com/Fadilix/cv-application/assets/121851593/c1324e7e-4e3d-4ae6-be97-238f082b1401)
-
-# Features
-- Live Preview of your CV
-- Download the generated CV
-- Generate a CV example
