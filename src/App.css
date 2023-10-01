@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500&family=Roboto+Condensed:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+
+.left {
+  background-color: rgb(93, 89, 89);
+  color: white;
+  width: 250px;
+  height: 120vh;
+  padding: 30px;
+}
+
+.left div {
+  margin-bottom: 20px;
+}
+
+.white-space {
+  height: 170px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.informations {
+  width: 600px;
+  height: 170px;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  background-color: white;
+  padding: 10px;
+}
+
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+}
+
+.middle {
+  background-color: teal;
+  color: white;
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.middle-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 600px;
+  height: 110px;
+}
+
+
+.left-right {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.right {
+  margin-top: 220px;
+  width: 600px;
+  text-align: start;
+  color: black;
+}
+
+.right h3 {
+  background-color: teal;
+  display: inline;
+  color: white;
+  padding: 3px;
+}
+
+.formation .studies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.right div {
+  margin-bottom: 20px;
+}
+
+.experience .studies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.result {
+  position: fixed;
+  right: 0%;
+}
+
+
+
+.form {
+  width: 600px;
+}
+
+label {
+  display: block;
+}
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+input {
+  all: unset;
+  display: block;
+  width: 290px;
+  border: 1px solid teal;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.cv-form {
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid teal;
+  margin-bottom: 40px;
+  background-color: rgb(240, 252, 252);
+  position: relative;
+  overflow: hidden;
+  transition: .3s all;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-color: teal;
+  width: 4px;
+  height: 300%;
+}
+
+
+button:hover::before {
+  width: 300%;
+  transition: .3s all;
+  z-index: -1;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  transition: .3s all;
+
+}
+
+.cv-actions{
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: space-between  ;
+}
+
+.clear{
+  color: rgb(222, 145, 145);
+  background-color: rgb(236, 229, 229);
+}
+
+
+.download{
+  background-color: rgb(216, 239, 216);
+  color: white;
+  color: black;
+}
+
+textarea{
+  padding: 10px;
+}
