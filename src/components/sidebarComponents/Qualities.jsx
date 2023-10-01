@@ -9,7 +9,7 @@ const Qualities = ({
     return (
         <div>
             <div>
-                <h1>Qualities</h1>
+                <h1>Qualities </h1>
                 <div className='Qualitiess'>
                     {inputs.map((input, index) => (
                         <input
