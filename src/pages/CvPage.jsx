@@ -104,13 +104,13 @@ const CvPage = () => {
     const handleQualChange = (e, index) => {
         const newQualities = [...qualities];
         newQualities[index] = e.target.value;
-        setLangs(newQualities);
+        setQualities(newQualities);
     };
 
 
     // center of interest
     const handleCOIAdding = () => {
-        setQualities([...qualities, ""])
+        setCenterOfInterest([...centerOfInterest, ""])
     }
     const handleCOIChange = (e, index) => {
         const newCOIs = [...centerOfInterest];
@@ -128,7 +128,6 @@ const CvPage = () => {
         newXPs[index] = e.target.value;
         setXP(newXPs);
     }
-
 
 
     return (
