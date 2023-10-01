@@ -58,8 +58,8 @@ const CvPage = () => {
         }));
     };
 
-    
-    
+
+
     //initial data
     const initialSkills = ["Medical care", "Consultant"]
     const initialLangs = ["English", "French"]
@@ -110,7 +110,7 @@ const CvPage = () => {
 
     // center of interest
     const handleCOIAdding = () => {
-        setQualities([...qualities, ""])
+        setCenterOfInterest([...centerOfInterest, ""])
     }
     const handleCOIChange = (e, index) => {
         const newCOIs = [...centerOfInterest];
