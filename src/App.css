@@ -203,25 +203,56 @@ button:hover {
 
 }
 
-.cv-actions{
+.cv-actions {
   display: flex;
   gap: 20px;
   flex-direction: row;
-  justify-content: space-between  ;
+  justify-content: space-between;
 }
 
-.clear{
+.clear {
   color: rgb(222, 145, 145);
   background-color: rgb(236, 229, 229);
 }
 
 
-.download{
+.download {
   background-color: rgb(216, 239, 216);
   color: white;
   color: black;
 }
 
-textarea{
+textarea {
   padding: 10px;
+}
+
+
+
+/* responsive (I should have used tailwindcss, lol)*/ 
+@media screen and (max-width: 1200px) {
+  .App {
+    overflow: hidden;
+  }
+
+  .result {
+    position: relative;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  input {
+    width: 500px;
+  }
+
+  textarea {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  input {
+    width: 300px
+  }
 }
