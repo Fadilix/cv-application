@@ -110,7 +110,7 @@ const CvPage = () => {
 
     // center of interest
     const handleCOIAdding = () => {
-        setCenterOfInterest([...centerOfInterest, ""])
+        setQualities([...qualities, ""])
     }
     const handleCOIChange = (e, index) => {
         const newCOIs = [...centerOfInterest];
