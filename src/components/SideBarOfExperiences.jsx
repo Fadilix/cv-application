@@ -1,9 +1,11 @@
 import React from 'react'
-import { useState } from 'react';
 
-const SideBarOfExperiences = ({competences, languages, quali, ci}) => {
-
-
+const SideBarOfExperiences = ({
+    competences,
+    languages,
+    quali,
+    ci
+}) => {
     return (
         <div>
             <div className="left">
@@ -45,4 +47,4 @@ const SideBarOfExperiences = ({competences, languages, quali, ci}) => {
     )
 }
 
-export default SideBarOfExperiences
+export default SideBarOfExperiences;

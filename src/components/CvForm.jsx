@@ -1,5 +1,4 @@
 import React from 'react'
-import JsPDF from "jspdf";
 import PersonalInfo from './sidebarComponents/PersonalInfo';
 import Skills from './sidebarComponents/Skills';
 import Languages from './sidebarComponents/Languages';
@@ -30,6 +29,7 @@ const CvForm = ({
   handleProXPAdding,
   handleProXPChange,
   handleDataClearing,
+  imageHandler
 
 }) => {
 
@@ -41,6 +41,7 @@ const CvForm = ({
           userInfo={userInfo}
           handleInputChange={handleInputChange}
           handleDataClearing={handleDataClearing}
+          imageHandler={imageHandler}
         />
 
         <Skills

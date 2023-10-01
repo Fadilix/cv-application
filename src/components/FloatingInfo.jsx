@@ -7,7 +7,7 @@ const FloatingInfo = ({ userInfo }) => {
             <div className="middle">
                 <div className='middle-2'>
                     <div className='profile-pic'>
-                        <img src={chancelier} alt="" />
+                        <img src={ userInfo.image || chancelier} alt="" />
                     </div>
 
                     <div className='info'>
@@ -50,4 +50,4 @@ const FloatingInfo = ({ userInfo }) => {
     )
 }
 
-export default FloatingInfo
+export default FloatingInfo;

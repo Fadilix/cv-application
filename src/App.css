@@ -7,7 +7,6 @@
   font-family: 'Manrope', sans-serif;
 }
 
-
 .left {
   background-color: rgb(93, 89, 89);
   color: white;
@@ -227,8 +226,24 @@ textarea {
 }
 
 
+/* profile picture input (form) */
+.profile-pic-input {
+  transition: .3s all;
+  background-color: aliceblue;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-/* responsive (I should have used tailwindcss, lol)*/ 
+.profile-pic-input:hover {
+  background-color: rgb(179, 214, 246);
+  transition: .3s all;
+}
+
+.default-image-input {
+  display: none;
+}
+
+/* responsive (a little bit)*/
 @media screen and (max-width: 1200px) {
   .App {
     overflow: hidden;

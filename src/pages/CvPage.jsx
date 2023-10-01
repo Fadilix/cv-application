@@ -2,23 +2,28 @@ import React from 'react'
 import CvResult from '../components/CvResult'
 import CvForm from '../components/CvForm'
 import { useState } from 'react';
+import {
+    initialBodyContentData,
+    initialCenterOfInterest,
+    initialData,
+    initialLangs,
+    initialQualities,
+    initialSkills,
+    initialXP
+} from '../components/data/defaultUserData';
 
 const CvPage = () => {
-    // initial data
-    const initialData = {
-        name: "Martin Chancelier",
-        email: "martinchancelier@gmail.com",
-        contact: "+44 1234 1234 1234",
-        address: "123 Rue de la Example 75001, Paris, France",
-    }
-
-    const initialBodyContentData = {
-        profile: "After 3 years of experience as a medical secretary within a multidisciplinary medical practice, I have gained the versatility required for this type of environment. I am available starting from March for a position in the Hauts-de-Seine region.",
-        studies: "Bachelor's degree in Design (July 2017) ST2S (Sciences and Technologies of Health and Social)",
-        school: "Jacques Prévert High School, Nanterre",
-
-    }
-
+    // upload image
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            setPersonalInfo((prev) => ({ ...prev, image: reader.result }));
+        };
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    };
 
     const handleBodyChange = (e) => {
         setBodyContentData((prevData) => ({ ...prevData, [e.target.name]: e.target.value }))
@@ -27,14 +32,13 @@ const CvPage = () => {
     const [BodyContentData, setBodyContentData] = useState(initialBodyContentData)
     const [personalInfo, setPersonalInfo] = useState(initialData)
 
-
+    // clearing data
     const handleDataClearing = () => {
         setBodyContentData({
             profile: "",
             studies: "",
             school: ""
         })
-
         setPersonalInfo({
             name: "",
             email: "",
@@ -42,7 +46,6 @@ const CvPage = () => {
             address: "",
         })
         setXP([""]);
-
         setInputs([""]);
         setLangs([""])
         setCenterOfInterest([""]);
@@ -58,18 +61,6 @@ const CvPage = () => {
         }));
     };
 
-
-
-    //initial data
-    const initialSkills = ["Medical care", "Consultant"]
-    const initialLangs = ["English", "French"]
-    const initialQualities = ["Team work", "self-control"]
-    const initialCenterOfInterest = ["Interaction Design", "Visual Branding and Identity Design", "User Experience (UX) Design"]
-    const initialXP = [
-        "Led a team of developers in the implementation of a scalable web application.",
-        "Collaborated with cross-functional teams to design and deliver high-quality software.",
-        "Developed and maintained robust backend systems using Node.js and MongoDB.",
-    ]
     const [langs, setLangs] = useState(initialLangs);
     const [inputs, setInputs] = useState(initialSkills);
     const [qualities, setQualities] = useState(initialQualities)
@@ -129,7 +120,6 @@ const CvPage = () => {
         setXP(newXPs);
     }
 
-
     return (
         <div className='App'>
             <div className='container'>
@@ -154,6 +144,7 @@ const CvPage = () => {
                     handleProXPChange={handleProXPChange}
                     xps={XP}
                     handleDataClearing={handleDataClearing}
+                    imageHandler={handleImageChange}
                 />
 
                 <CvResult
@@ -164,13 +155,10 @@ const CvPage = () => {
                     experiences={XP}
                     ci={centerOfInterest}
                     quali={qualities}
-
-
-
                 />
             </div>
         </div>
-    )
+    );
 }
 
-export default CvPage
+export default CvPage;

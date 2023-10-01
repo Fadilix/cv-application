@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 
 const KeyInfos = ({ BodyContentData, experiences }) => {
     return (
@@ -26,7 +25,6 @@ const KeyInfos = ({ BodyContentData, experiences }) => {
                 </div>
             </div>
 
-
             <div className="experience">
                 <h3>Professional experiences</h3>
                 <div style={{ marginTop: "5px" }}>
@@ -39,4 +37,4 @@ const KeyInfos = ({ BodyContentData, experiences }) => {
     )
 }
 
-export default KeyInfos
+export default KeyInfos;

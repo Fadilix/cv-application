@@ -1,10 +1,11 @@
 import React from 'react'
 import html2canvas from 'html2canvas';
 
-
 const PersonalInfo = ({
-  userInfo, handleInputChange,
-  handleDataClearing
+  userInfo,
+  handleInputChange,
+  handleDataClearing,
+  imageHandler
 }) => {
   const showExample = () => {
     window.location.reload();
@@ -79,8 +80,28 @@ const PersonalInfo = ({
           value={userInfo.address}
           onChange={handleInputChange}
         />
-
       </div>
+
+      <div>
+        <label htmlFor="">Profile picture</label>
+        <input
+        className='default-image-input'
+          type="file"
+          id='selectedImg'
+          name='image'
+          accept='image/*'
+          onChange={imageHandler}
+        />
+        <input
+          className='profile-pic-input'
+          type="button"
+          value="Upload picture"
+          onClick={() => {
+            document.getElementById("selectedImg").click();
+          }}
+        />
+      </div>
+
     </div>
   )
 }
