@@ -245,8 +245,9 @@ textarea {
 
 /* responsive (a little bit)*/
 @media screen and (max-width: 1200px) {
+
   .App {
-    overflow: hidden;
+    width: fit-content;
   }
 
   .result {
@@ -258,7 +259,7 @@ textarea {
   }
 
   input {
-    width: 500px;
+    width: 800px;
   }
 
   textarea {
@@ -266,8 +267,27 @@ textarea {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 412px) {
+  input{
+    width: 200px
+  };
+}
+
+
+@media screen and (max-width: 1400px) {
+  .cv-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .cv-actions button {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 820px) {
   input {
-    width: 300px
+    width: 600px;
   }
 }
