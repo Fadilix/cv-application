@@ -19,5 +19,5 @@ export const initialCenterOfInterest = ["Interaction Design", "Visual Branding a
 export const initialXP = [
     "Led a team of developers in the implementation of a scalable web application.",
     "Collaborated with cross-functional teams to design and deliver high-quality software.",
-    "Developed and maintained robust backend systems using Node.js and MongoDB.",
+    "Developed and maintained robust backend systems using Node.js and MongoDB."
 ]
