@@ -252,6 +252,7 @@ textarea {
 
   .result {
     position: relative;
+    width: fit-content;
   }
 
   .container {
@@ -268,9 +269,9 @@ textarea {
 }
 
 @media screen and (max-width: 412px) {
-  input{
+  input {
     width: 200px
-  };
+  }
 }
 
 
@@ -279,6 +280,11 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 0px;
+  }
+
+  .result {
+    position: relative;
+    width: 700px;
   }
 
   .cv-actions button {

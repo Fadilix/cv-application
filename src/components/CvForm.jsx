@@ -90,4 +90,4 @@ const CvForm = ({
   )
 }
 
-export default CvForm
+export default CvForm;
